@@ -1,16 +1,10 @@
-# ML4W dotfiles 2.8.2
+# dotfiles
 
-An advanced configuration of Hyprland and Qtile for Arch Linux based distributions. This package includes an installation script to install and setup the required components.
-
-<a href="https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/screenshots/v281/screenshot-281-1.png?ref_type=heads" target="_blank"><img src="screenshots/v281/screenshot-281-1.png" /></a>
-
-You can find the installation video (Version 2.7.1) on YouTube: <a href="https://youtu.be/kHG5czrQ7WA" target="_blank">Install Arch Linux with Hyprland & Qtile</a>
-
+This is a fork of the ML4W dotfiles, with minimal changes. The ML4W Welcome app will be installed. I recommend you to check https://gitlab.com/stephan-raabe/dotfiles.git for updates, as I will (almost) never update this, since I don't main Hyprland.
 [TOC]
 
 # Installation
 
-To make it easy for you to get started with the ML4W dotfiles, here's a list of recommended next steps.
 
 The package includes an installation script install.sh that will guide you through all steps of the installation or update process.
 
@@ -28,7 +22,6 @@ The dotfiles are tested with the following Arch based distributions:
 The installation should work on all Arch Linux based distributions as well.
 
 For Manjaro users: Hyprland and required components are under ongoing development. That's why it's possible that some packages are not immediatly available on Manjaro e.g., hyprlock or hypridle. But usually, the packages will be published later.
-
 For Arco Linux users: Please reinstall/force the installation of all packages during the installation/update process of the install script. The script will also offer to remove ttf-ms-fonts if installed to avoid issues with icons on waybar. 
 
 ## Before you start
@@ -37,12 +30,6 @@ PLEASE BACKUP YOUR EXISTING .config FOLDER WITH YOUR DOTFILES BEFORE STARTING TH
 
 The installation script will create a backup from an previous dotfiles installation.
 
-## Reference Installation
-
-The reference installation for the ML4W dotfiles is based on Arch Linux installed with archinstal and the minimal profile. 
-
-Please watch the video on YouTube: https://youtu.be/kHG5czrQ7WA
-
 ## Installation with GIT
 
 ```
@@ -50,7 +37,7 @@ Please watch the video on YouTube: https://youtu.be/kHG5czrQ7WA
 cd ~/Downloads
 
 # 2.) Clone the dotfiles repository into the Downloads folder
-git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
+git clone --depth=1 https://gitlab.com/PyroIsDumb/dotfiles.git
 
 # 3.) Change into the dotfiles folder
 cd dotfiles
@@ -67,7 +54,7 @@ cd dotfiles
 cd ~/Downloads
 
 # 2.) Clone the dotfiles repository into the Downloads folder
-git clone https://gitlab.com/stephan-raabe/dotfiles.git
+git clone https://gitlab.com/PyroIsDumb/dotfiles.git
 
 # 3.) Change into the new dotfiles folder
 cd dotfiles
@@ -80,39 +67,7 @@ git checkout dev
 
 ```
 
-## Update
-
-Please follow the steps to update from earlier dotfiles versions to 2.8.2
-
-```
-# 1.) Remove existing downloaded dotfiles
-rm -rf ~/Downloads/dotfiles
-
-# 2.) Change into your Downloads folder
-cd ~/Downloads
-
-# 3.) Clone the dotfiles repository into the Downloads folder
-git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
-
-# 4.) Change into the dotfiles folder
-cd dotfiles
-
-# 5.) Start the installation
-./install.sh
-
-```
-
-From 2.8.2 onwards you can use the integrated update feature to update your dotfiles to the main or rolling release whenever you want.
-
-<img src="screenshots/welcome-update-dotfiles.png" />
-
-You can also use the ML4W installer to update to the main-release (Latest Version) or the Rolling Release: https://gitlab.com/stephan-raabe/installer
-
-You can force a clean re-installation of the dotfiles by removing the folder ~/dotfiles before starting the installation.
-
-Please note that you can create a backup of your existing configuration with the backup feature of the install script. It's recommended to remove the folder ~/dotfiles only after creating a backup. 
-
-## ML4W dotfiles Installer
+## Dotfiles installation script
 
 You can also use the ML4W dotfiles installer script to download and install the latest release: https://gitlab.com/stephan-raabe/installer
 
@@ -143,7 +98,7 @@ Users have reported that Hyprland with dotfiles could be installed successfully 
 
 Please select the following variation in the settings script (system/environment):
 
-https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/hypr/conf/environments/nvidia.conf
+https://gitlab.com/PyroIsDumb/dotfiles/-/blob/main/hypr/conf/environments/nvidia.conf
 
 Or set the included environment variables in hyprland.conf
 
@@ -160,7 +115,7 @@ You can install a custom tty login issue (layout) with the dotfiles installer.
 
 ## Launch Hyprland with a Display Manager
 
-I made good experiences with the Display Manager SDDM (https://github.com/sddm/sddm). Also gdm could work. 
+I have had good experiences with the Display Manager SDDM (https://github.com/sddm/sddm). gdm could also work, but I haven't tested that.
 
 ```
 yay -S sddm
@@ -180,7 +135,7 @@ Hypridle will start Hyprlock after 10 minutes of inactivity and will try to susp
 
 In the ML4W welcome app you can switch between a Laptop (systemctl) and Desktop PC configuration (dpms). The prepared hypridle templates are stored in /hypr/conf/hypridle/ and will overwrite the file /hypr/hypridle.conf
 
-The selected hypridle configuration can be restored from the ML4W installer during a dotfiles update.
+The selected hypridle configuration can be restored from the installer script during a dotfiles update.
 
 ## Installation in a KVM virtual machine
 
@@ -192,7 +147,7 @@ To fix the mouse issue on Hyprland, open the Hyprland settings with <kbd>SUPER</
 
 ## Base Hyprland installation with Hyperland Starter
 
-If you want to install only the core packages of Hyprland as a starting point for your Hyprland experiments please also try my Hyprland Starter script: https://gitlab.com/stephan-raabe/hyprland-starter
+If you want to only install the core packages of Hyprland as a starting point for your Hyprland experiments, I suggest you to use Stephan Raabe's Hyprland Starter script: https://gitlab.com/stephan-raabe/hyprland-starter
 
 # Some important key bindings
 
@@ -205,27 +160,13 @@ If you want to install only the core packages of Hyprland as a starting point fo
 - <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd>: Reload waybar on Hyprland
 
 All keybindings for Hyprland with right mouse click on Apps in waybar or here: 
-https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/hypr/conf/keybindings.conf
+https://gitlab.com/PyroIsDumb/dotfiles/-/blob/main/hypr/conf/keybindings.conf
 
-All keybindings for Qtile: https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/qtile/config.py
-
-# Hyprland
-
-<a href="https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/screenshots/v28/screenshot-28-1.png?ref_type=heads" target="_blank"><img src="screenshots/v28/screenshot-28-1.png" /></a>
-
-<a href="https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/screenshots/v28/screenshot-28-2.png?ref_type=heads" target="_blank"><img src="screenshots/v28/screenshot-28-2.png" /></a>
-
-<a href="https://gitlab.com/stephan-raabe/dotfiles/-/blob/main/screenshots/v28/screenshot-28-3.png?ref_type=heads" target="_blank"><img src="screenshots/v28/screenshot-28-3.png" /></a>
-
-<b><a href="https://gitlab.com/stephan-raabe/dotfiles/-/tree/main/screenshots?ref_type=heads">You can find more screenshots here.</a></b>
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank">Watch on YouTube</a>
+All keybindings for Qtile: https://gitlab.com/PyroIsDumb/dotfiles/-/blob/main/qtile/config.py
 
 ## ML4W Welcome App
 
 After starting the ML4W dotfiles for the first time, the ML4W Welcome App opens. This app is the starting point to discover the Hyprland setup.
-
-<img src="screenshots/screenshot-welcome.app.png" />
 
 The welcome screen includes the most important keybindings to open a terminal or a browser.
 
@@ -259,7 +200,7 @@ In addition, you can switch the Waybar Template with <kbd>SUPER</kbd> + <kbd>CTR
 
 The templates are available in ~/dotfiles/waybar/themes. You can add your own personal themes into this folder. 
 
-More information here: https://gitlab.com/stephan-raabe/dotfiles/-/tree/main/waybar
+You can find more information on this repo or on Raabe's maintained repo: https://gitlab.com/stephan-raabe/dotfiles/-/tree/main/waybar
 
 ## Hyprland settings
 
@@ -273,7 +214,7 @@ You can also edit the file directly in the settings script in the section Custom
 
 ## Screensharing and recording
 
-More information you can find here:
+You can find more information about screencasting on this github page:
 https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
 
 Please note that every Arch Linux system is different and I cannot guarantee that everything works fine on your system.
@@ -297,12 +238,6 @@ Please note that every Arch Linux system is different and I cannot guarantee tha
 - Idle Manager: hypridle
 - Screenlock: hyprlock
 
-# Qtile X11
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank"><img src="screenshots/v27/screenshot-27-3.png" alt="Click to watch on YouTube" /></a>
-
-<a href="https://youtu.be/e9ro_P9rbFk" target="_blank"><img src="screenshots/v27/screenshot-27-4.png" alt="Click to watch on YouTube" /></a>
-
 ## Wallpaper and Pywal
 
 Included is a pywal configuration that changes the color scheme based on a randomly selected wallpaper. With the key binding <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>W</kbd> you can change the wallpaper coming from the folder ~/wallpaper/. 
@@ -317,7 +252,7 @@ Included is a pywal configuration that changes the color scheme based on a rando
 - Icons: Font Awesome
 - Launch Menus: Rofi
 - Colorscheme: pywal
-- Browsers: chromium (brave optional)
+- Browsers: chromium and firefox
 - Filemanager: Thunar
 - Cursor: Bibata Modern Ice
 - Icons: Papirus-Icon-Theme
@@ -350,7 +285,7 @@ yay -S hypridle hyprlock
 
 ## Missing icons in waybar
 
-In case of missing icons on waybar, it's due to a conflict between several installed fonts (can happen especially on Arco Linux). Please make sure that ttf-ms-fonts is uninstalled and ttf-font-awesome and otf-font-awesome are installed with
+In case of missing icons on the waybar, it's due to a conflict between several installed fonts (This can happen especially on Arch Linux). Please make sure that ttf-ms-fonts is uninstalled and ttf-font-awesome and otf-font-awesome are installed.
 
 ```
 yay -R ttf-ms-fonts
@@ -381,35 +316,8 @@ sudo rm /etc/systemd/system/display-manager.service
 
 ## Waybar is not loading
 
-There could be a conflict with xdg-desktop-portal-gtk. Please try to remove the package if installed with:
+This could be caused by a conflict with xdg-desktop-portal-gtk. Please try to remove the package if installed with:
 
 ```
 sudo pacman -R xdg-desktop-portal-gtk
 ```
-
-# Wallpaper repository
-
-You can find my wallpaper collection in the repository https://gitlab.com/stephan-raabe/wallpaper
-
-# Special Thanks
-
-THANK YOU very much for all your support, contributions and ideas:
-
-- Diana Ward: https://github.com/dianaw353
-- Don Williams: https://github.com/dwilliam62
-- Teodor Orzechowski: https://gitlab.com/sq6gtt
-- Jamie Deppeler: https://gitlab.com/bknight2k
-
-and many more...
-
-Thanks to all YouTube subscribers for all your great feedback.
-
-# Inspirations
-
-The following projects have inspired me:
-
-- https://github.com/dianaw353/hyprland-configuration-rootfs
-- https://github.com/prasanthrangan/hyprdots
-- https://github.com/sudo-harun/dotfiles
-
-and many more...
