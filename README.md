@@ -1,7 +1,6 @@
 # dotfiles
 
-This is a fork of the ML4W dotfiles, with minimal changes. The ML4W Welcome app will be installed. I recommend you to check https://gitlab.com/stephan-raabe/dotfiles.git for updates, as I will (almost) never update this, since I don't main Hyprland.
-[TOC]
+This is a fork of the ML4W dotfiles, with minimal changes. The ML4W Welcome app will be installed. I recommend you to check https://gitlab.com/stephan-raabe/dotfiles.git for updates, as I will (almost) never update this, as I don't feel like switching it up every so often. Any updates you see, will probably be me just adding new wallpapers, or changing a few keybinds around.
 
 # Installation
 
