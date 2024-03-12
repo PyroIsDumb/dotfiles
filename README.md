@@ -37,7 +37,7 @@ The installation script will create a backup from an previous dotfiles installat
 cd ~/Downloads
 
 # 2.) Clone the dotfiles repository into the Downloads folder
-git clone --depth=1 https://gitlab.com/PyroIsDumb/dotfiles.git
+git clone --depth=1 https://github.com/PyroIsDumb/dotfiles.git
 
 # 3.) Change into the dotfiles folder
 cd dotfiles
@@ -54,7 +54,7 @@ cd dotfiles
 cd ~/Downloads
 
 # 2.) Clone the dotfiles repository into the Downloads folder
-git clone https://gitlab.com/PyroIsDumb/dotfiles.git
+git clone https://github.com/PyroIsDumb/dotfiles.git
 
 # 3.) Change into the new dotfiles folder
 cd dotfiles
@@ -162,7 +162,7 @@ If you want to only install the core packages of Hyprland as a starting point fo
 All keybindings for Hyprland with right mouse click on Apps in waybar or here: 
 https://gitlab.com/PyroIsDumb/dotfiles/-/blob/main/hypr/conf/keybindings.conf
 
-All keybindings for Qtile: https://gitlab.com/PyroIsDumb/dotfiles/-/blob/main/qtile/config.py
+All keybindings for Qtile: https://github.com/PyroIsDumb/dotfiles/-/blob/main/qtile/config.py
 
 ## ML4W Welcome App
 
