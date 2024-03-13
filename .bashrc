@@ -8,27 +8,29 @@
 # -----------------------------------------------------
 # ~/.bashrc
 # -----------------------------------------------------
+# Bandaid fix for launching X apps on wayland (ONLY WORKS WHEN LAUNCHING THROUGH TERMINAL)
+T_QPA_PLATFORM=xcb
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 PS1='[\u@\h \W]\$ '
 
 # Define Editor
-export EDITOR=nvim
+export EDITOR=nano
 
 # -----------------------------------------------------
 # ALIASES
 # -----------------------------------------------------
 
 alias c='clear'
-alias nf='neofetch'
+alias hf='hyfetch'
 alias pf='pfetch'
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
-alias vim='$EDITOR'
+alias nano='$EDITOR'
 alias ts='~/dotfiles/scripts/snapshot.sh'
 alias matrix='cmatrix'
 alias wifi='nmtui'
