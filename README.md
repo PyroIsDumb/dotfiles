@@ -5,9 +5,9 @@ This is a fork of the ML4W dotfiles, with minimal changes. The ML4W Welcome app 
 # Installation
 
 
-The package includes an installation script install.sh that will guide you through all steps of the installation or update process.
+The package includes an installation script named "install.sh", that will guide you through all steps of the installation or update process.
 
-PLEASE NOTE: Every Linux distribution and setup can be different. Therefore, I cannot guarantee that the installation will work smoothly everywhere. Installation on your own risk.
+PLEASE NOTE: Every Linux distribution and setup can be different. Therefore, I cannot guarantee that the installation will work smoothly everywhere. Install on your own risk.
 
 ## Supported platforms
 
@@ -20,14 +20,14 @@ The dotfiles are tested with the following Arch based distributions:
 
 The installation should work on all Arch Linux based distributions as well.
 
-For Manjaro users: Hyprland and required components are under ongoing development. That's why it's possible that some packages are not immediatly available on Manjaro e.g., hyprlock or hypridle. But usually, the packages will be published later.
+For Manjaro users: Hyprland and required components are under ongoing development. That's why it's possible that some packages are not immediatly available on Manjaro (e.g., hyprlock or hypridle). But usually, the packages will be published later.
 For Arco Linux users: Please reinstall/force the installation of all packages during the installation/update process of the install script. The script will also offer to remove ttf-ms-fonts if installed to avoid issues with icons on waybar. 
 
 ## Before you start
 
 PLEASE BACKUP YOUR EXISTING .config FOLDER WITH YOUR DOTFILES BEFORE STARTING THE SCRIPTS FOR INITIAL INSTALLTION.
 
-The installation script will create a backup from an previous dotfiles installation.
+The installation script will create a backup of your previous dotfiles installation.
 
 ## Installation with GIT
 
@@ -84,13 +84,13 @@ rm -rf ~/dotfiles-versions/$version/vim/
 rm -rf ~/dotfiles-versions/$version/nvim/
 ```
 
-This script will for example remove the vim and nvim folder before the installation. The symbolic link will not be created because the source folder doesn't exits.
+This script will for example remove the vim and nvim folder before the installation. The symbolic link will not be created because the source folder doesn't exists.
 
 You can find a template in .install/templates/hook.sh
 
 ## Hyprland & NVIDIA 
 
-There is no official Hyprland support for Nvidia hardware. However, you might make it work properly following this page.
+There is no official Hyprland support for NVIDIA hardware. However, you get it to work properly following this page.
 https://wiki.hyprland.org/Nvidia/
 
 Users have reported that Hyprland with dotfiles could be installed successfully on setups with NVDIA GPUs using the nouveau open source drivers. 
@@ -213,7 +213,7 @@ You can also edit the file directly in the settings script in the section Custom
 
 ## Screensharing and recording
 
-You can find more information about screencasting on this github page:
+Screencasting using Wayland can be a bit dicy sometimes. You can find more information about screencasting on this github page:
 https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
 
 Please note that every Arch Linux system is different and I cannot guarantee that everything works fine on your system.
@@ -226,7 +226,7 @@ Please note that every Arch Linux system is different and I cannot guarantee tha
 - Icons: Font Awesome
 - Launch Menus: Rofi
 - Colorscheme: pywal
-- Browsers: chromium (brave optional)
+- Browsers: Chromium and Firefox
 - Filemanager: Thunar
 - Cursor: Bibata Modern Ice
 - Icons: Papirus-Icon-Theme
@@ -305,7 +305,7 @@ yay -S sddm-git sddm-sugar-candy-git
 
 Or you can install another display manager.
 
-To stop, disable and remove sddm service.
+To stop, disable and remove the sddm service.
 
 ```
 sudo systemctl stop sddm.service
