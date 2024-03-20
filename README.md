@@ -1,4 +1,4 @@
-## The install script is outdated, and will be (probably) worked on at a later time. If you install my dotgiles using the script, there's a high chance for your ``~/dotfiles/conf/hyprland.conf`` file to be broken.
+## The install script is outdated, and will be (probably) worked on at a later time. If you install my dotfiles using the script, there's a high chance for your ``~/dotfiles/conf/hyprland.conf`` file to be broken.
 ## Do not report any errors to me if you installed my dotfiles using the install.sh script. I will not look into them.
 
 # Dotfiles
