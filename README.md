@@ -1,4 +1,7 @@
-# dotfiles
+## The install script is outdated, and will be (probably) worked on at a later time. If you install my dotgiles using the script, there's a high chance for your ``~/dotfiles/conf/hyprland.conf`` file to be broken.
+## Do not report any errors to me if you installed my dotfiles using the install.sh script. I will not look into them.
+
+# Dotfiles
 
 This is a fork of the ML4W dotfiles, with minimal changes. The ML4W Welcome app will be installed. I recommend you to check https://gitlab.com/stephan-raabe/dotfiles.git for updates, as I will (almost) never update this, as I don't feel like switching it up every so often. Any updates you see, will probably be me just adding new wallpapers, or changing a few keybinds around.
 
